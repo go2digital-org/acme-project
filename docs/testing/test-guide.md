@@ -120,9 +120,6 @@ docker-compose exec app ./vendor/bin/pest tests/Browser/
 
 #### Local Development
 ```bash
-# Switch to local test environment
-./scripts/env-local.sh
-
 # Run migrations on test database
 php artisan migrate --database=mysql --env=testing
 

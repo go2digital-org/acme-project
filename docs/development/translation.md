@@ -254,3 +254,11 @@ The system is designed to easily support:
 ---
 
 **Status**:  **COMPLETE** - Fully functional multilingual platform ready for deployment.
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

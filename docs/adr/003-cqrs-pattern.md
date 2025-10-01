@@ -226,3 +226,11 @@ public function testGetCampaignListQuery(): void
 
 - [ADR-001: Hexagonal Architecture](001-hexagonal-architecture.md) - Overall architecture pattern
 - [ADR-004: Domain Driven Design](004-domain-driven-design.md) - Domain modeling approach
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

@@ -324,3 +324,11 @@ This implementation provides ACME Corp with a robust, secure, and scalable payme
 6. **Maintains High Availability** with intelligent failover and health monitoring
 
 The system is production-ready and designed to handle enterprise-scale transaction volumes while maintaining the highest standards of security and compliance.
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

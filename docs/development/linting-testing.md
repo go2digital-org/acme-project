@@ -177,3 +177,11 @@ The tools work together to provide comprehensive coverage:
 5. **Metrics Monitoring**: Track quality improvements over time
 
 This setup provides enterprise-grade code quality assurance with tools totaling over 20,000+ GitHub stars, ensuring the ACME Corp platform maintains the highest standards of code quality, security, and architectural integrity.
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

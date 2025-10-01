@@ -314,3 +314,11 @@ log {
 5. **Logging**: Ensure log files don't contain sensitive information
 
 This configuration provides enterprise-grade multi-tenant hosting with security, performance, and monitoring built-in.
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

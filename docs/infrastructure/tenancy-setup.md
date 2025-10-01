@@ -202,3 +202,11 @@ modules/
 3. **Implement tenant billing** for SaaS model
 4. **Add tenant resource limits** enforcement
 5. **Create tenant-specific themes** and branding
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

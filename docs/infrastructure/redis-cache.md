@@ -269,3 +269,11 @@ The `.env.redis-cache` file provides:
  **Multilingual optimization** with locale-specific caching
 
 The implemented Redis caching system transforms the ACME Corp donation platform into a high-performance, enterprise-ready application capable of handling massive scale while maintaining exceptional user experience across all supported locales.
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

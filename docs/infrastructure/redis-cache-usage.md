@@ -294,3 +294,11 @@ For issues or questions about the caching infrastructure:
 2. Review Redis logs for connection issues
 3. Monitor application logs for cache-related errors
 4. Use the status command for health checks
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

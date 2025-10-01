@@ -528,7 +528,8 @@ This hexagonal architecture implementation represents technical leadership throu
 
 ---
 
----
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
 
-Developed and Maintained by Go2Digital
-Copyright 2025 Go2Digital - All Rights Reserved
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

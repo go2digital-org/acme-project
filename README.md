@@ -4,7 +4,7 @@
 
 [![CI Pipeline](https://github.com/go2digital-org/acme-project/actions/workflows/ci.yml/badge.svg)](https://github.com/go2digital-org/acme-project/actions/workflows/ci.yml)
 [![Laravel Version](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com)
-[![API Platform](https://img.shields.io/badge/API%20Platform-3.x-blue.svg)](https://api-platform.com)
+[![API Platform](https://img.shields.io/badge/API%20Platform-4.x-blue.svg)](https://api-platform.com)
 [![PHPStan Level](https://img.shields.io/badge/PHPStan-Level%208-brightgreen.svg)](https://phpstan.org)
 [![Security Check](https://img.shields.io/badge/Security-Enlightn%20Enabled-blue.svg)](https://www.laravel-enlightn.com/docs/security/security-analyzer.html)
 [![Code Quality](https://img.shields.io/badge/Code%20Quality-Pint%20%E2%80%A2%20PHPStan%20%E2%80%A2%20Rector%20%E2%80%A2%20Deptrac-0ea5e9.svg)](#quality)
@@ -14,13 +14,37 @@
   <img src="https://go2digit.al/storage/media/a58e6e4f-04bc-4e84-86fb-c18bd0f15e03.png" alt="ACME Corp CSR Platform Banner" width="600">
 </div>
 
-Enterprise-grade Corporate Social Responsibility platform engineered with Laravel 12, API Platform 3.x, Hexagonal Architecture, and Domain-Driven Design principles. Features pure API-first architecture with CQRS pattern, designed to handle 20,000+ concurrent users across global operations.a
+Enterprise-grade Corporate Social Responsibility platform engineered with Laravel 12, API Platform 4.x, Hexagonal Architecture, and Domain-Driven Design principles. Features pure API-first architecture with CQRS pattern, designed to handle 20,000+ concurrent users across global operations.
+
+## Screenshots
+
+<div align="center">
+
+### Dashboard & Analytics
+<img src="docs/screenshots/dashboard-overview.png" alt="Dashboard Overview" width="800">
+
+*Real-time donation tracking, campaign analytics, and impact metrics*
+
+### Campaign Management
+<img src="docs/screenshots/my-campaigns.png" alt="Campaign Management" width="800">
+
+*Create, manage, and track fundraising campaigns with advanced filtering*
+
+### Donation Processing
+<img src="docs/screenshots/donation-processing.png" alt="Donation Processing" width="800">
+
+*Secure multi-gateway payment processing with real-time status updates*
+
+### More Screenshots
+[View all screenshots →](docs/screenshots/)
+
+</div>
 
 ## Tech Stack
 
 ### Core Technologies
 - Laravel 12.x with PHP 8.4
-- API Platform 3.x for pure API-first architecture
+- API Platform 4.x for pure API-first architecture
 - MySQL 8.0 with Redis 7.x caching
 - Meilisearch for full-text search
 - FrankenPHP with HTTP/3 support
@@ -51,7 +75,6 @@ docker-compose exec app php artisan scout:sync-index-settings
 
 ### Local Development
 ```bash
-./scripts/env-local.sh  # Switch to local environment
 composer install && npm install
 php artisan migrate --seed
 php artisan serve
@@ -352,8 +375,8 @@ php artisan event:cache
 # Docker development/staging
 docker-compose --env-file .env.docker up -d
 
-# Local development
-./scripts/env-local.sh && php artisan serve
+# Local development (uses .env automatically)
+php artisan serve
 
 # Stop containers
 docker-compose down

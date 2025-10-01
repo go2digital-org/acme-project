@@ -187,12 +187,10 @@ None identified.
 cp .env.example .env
 # Edit .env with local configuration
 
-# 2. Docker development  
-./scripts/env-docker.sh
-docker-compose up -d
+# 2. Docker development
+docker-compose --env-file .env.docker up -d
 
-# 3. Local development
-./scripts/env-local.sh
+# 3. Local development (uses .env automatically)
 php artisan serve
 ```
 
@@ -230,6 +228,14 @@ The ACME Corp CSR platform demonstrates **good security practices** for environm
 
 ---
 
-**Audit Date:** September 12, 2025  
-**Auditor:** Environment Auditor  
+**Audit Date:** September 12, 2025
+**Auditor:** Environment Auditor
 **Next Review:** December 12, 2025 (Quarterly)
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

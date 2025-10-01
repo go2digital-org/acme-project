@@ -98,3 +98,11 @@ In your Blade templates, you can use these directives:
 3. **Type Safety**: Value objects maintain currency validation
 4. **Blade Integration**: Easy to use in templates with custom directives
 5. **Extensible**: Easy to add new currencies or formatting rules
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

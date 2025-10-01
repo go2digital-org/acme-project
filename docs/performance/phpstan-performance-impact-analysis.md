@@ -214,3 +214,11 @@ public function warmPopularCampaignsCache(): void {
 **Date**: September 19, 2025
 **Platform Scale**: 20,000+ concurrent users, sub-100ms response times
 **Test Coverage**: 860+ unit tests, 200+ integration tests passing
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

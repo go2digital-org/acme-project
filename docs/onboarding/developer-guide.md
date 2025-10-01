@@ -15,7 +15,7 @@ The ACME Corp CSR Platform is an enterprise-grade Corporate Social Responsibilit
 
 ### Technology Stack
 - **Backend**: PHP 8.4, Laravel 11.x
-- **API**: API Platform 3.x with OpenAPI documentation
+- **API**: API Platform 4.x with OpenAPI documentation
 - **Database**: MySQL 8.0 with Redis caching
 - **Search**: Meilisearch for full-text search
 - **Frontend**: Livewire 3.x, Filament 4.x Admin Panel
@@ -92,9 +92,6 @@ cd acme-corp-csr-platform
 composer install --optimize-autoloader
 npm install
 
-# Switch to local environment
-./scripts/env-local.sh
-
 # Configure environment
 cp .env.example .env
 php artisan key:generate
@@ -125,7 +122,7 @@ Our platform implements **Hexagonal Architecture** (also known as Ports and Adap
 - **Team Productivity**: Multiple teams can work independently
 
 ```
-🏗️ Architecture Layers:
+Architecture Layers:
 
 Infrastructure Layer (Outermost)
 ├── Controllers (API endpoints)
@@ -169,19 +166,19 @@ Each module follows a consistent structure:
 
 ```
 modules/[ModuleName]/
-├── Domain/                    # 🎯 Core business logic
+├── Domain/                    # Core business logic
 │   ├── Model/                # Rich domain models
 │   ├── ValueObject/          # Immutable value objects
 │   ├── Repository/           # Repository interfaces
 │   ├── Specification/        # Business rule specifications
 │   ├── Exception/            # Domain-specific exceptions
 │   └── Event/                # Domain events
-├── Application/              # 🎭 Use case orchestration
+├── Application/              # Use case orchestration
 │   ├── Command/              # CQRS Commands and Handlers
 │   ├── Query/                # CQRS Queries and Handlers
 │   ├── ReadModel/            # Optimized read models
 │   └── Service/              # Application services
-└── Infrastructure/           # 🔌 External adapters
+└── Infrastructure/           # External adapters
     ├── Laravel/              # Laravel-specific implementations
     │   ├── Controllers/      # Single-action controllers
     │   ├── Models/           # Eloquent models (persistence)
@@ -212,7 +209,7 @@ final class Campaign {
     private Money $raised;
     private CampaignStatus $status;
 
-    // ✅ Pure business logic - no framework dependencies
+    // Pure business logic - no framework dependencies
     public function acceptDonation(Money $amount): DonationResult {
         if (!$this->status->isActive()) {
             return DonationResult::rejected('Campaign is not active');
@@ -243,7 +240,7 @@ final readonly class CreateCampaignCommandHandler {
     ) {}
 
     public function handle(CreateCampaignCommand $command): Campaign {
-        // 🎭 Orchestrate domain objects
+        // Orchestrate domain objects
         $campaign = Campaign::create(
             name: $command->name,
             goal: Money::fromString($command->goalAmount, $command->currency),
@@ -252,7 +249,7 @@ final readonly class CreateCampaignCommandHandler {
 
         $this->repository->save($campaign);
 
-        // 📢 Dispatch domain event
+        // Dispatch domain event
         $this->eventDispatcher->dispatch(
             new CampaignCreated($campaign->getId())
         );
@@ -270,7 +267,7 @@ final class CreateCampaignController {
         CreateCampaignRequest $request,
         CommandBusInterface $commandBus
     ): JsonResponse {
-        // 🔌 Pure delegation to business logic
+        // Pure delegation to business logic
         $command = new CreateCampaignCommand(...$request->validated());
         $campaign = $commandBus->dispatch($command);
 
@@ -405,7 +402,7 @@ final class ProcessDonationController {
 Our testing follows the architecture layers:
 
 ```
-🧪 Test Structure:
+Test Structure:
 
 tests/Unit/                    # Domain Layer Tests
 ├── [Module]/Domain/
@@ -432,22 +429,22 @@ tests/Architecture/            # Architectural Boundary Tests
 ### Testing Commands
 
 ```bash
-# 🚀 Quick test commands
+# Quick test commands
 ./vendor/bin/pest --testsuite=Unit          # Pure domain logic (fast)
 ./vendor/bin/pest --testsuite=Integration   # Infrastructure tests
 ./vendor/bin/pest --testsuite=Feature       # API endpoint tests
 ./vendor/bin/pest tests/Browser/             # Browser tests
 
-# ⚡ Parallel execution for speed
+# Parallel execution for speed
 ./vendor/bin/pest --parallel
 
-# 📊 Coverage analysis
+# Coverage analysis
 ./vendor/bin/pest --coverage --min=90
 
-# 🏗️ Architecture validation
+# Architecture validation
 ./vendor/bin/pest tests/Architecture/
 
-# 🔍 Specific tests
+# Specific tests
 ./vendor/bin/pest tests/Unit/Campaign/Domain/Model/CampaignTest.php
 ./vendor/bin/pest --filter="can accept valid donation"
 ```
@@ -458,7 +455,7 @@ tests/Architecture/            # Architectural Boundary Tests
 ```php
 // tests/Unit/Campaign/Domain/Model/CampaignTest.php
 test('campaign accepts valid donation', function () {
-    // 🎯 Pure domain testing - no database, no framework
+    // Pure domain testing - no database, no framework
     $campaign = Campaign::create(
         name: 'Clean Water Initiative',
         goal: Money::euros(1000),
@@ -486,7 +483,7 @@ test('campaign rejects donation when inactive', function () {
 ```php
 // tests/Integration/Campaign/Infrastructure/Repository/CampaignRepositoryTest.php
 test('saves and retrieves campaign from database', function () {
-    // 🔌 Test database integration
+    // Test database integration
     $campaign = Campaign::create(/* ... */);
 
     $this->campaignRepository->save($campaign);
@@ -502,7 +499,7 @@ test('saves and retrieves campaign from database', function () {
 ```php
 // tests/Feature/Api/Campaign/CreateCampaignTest.php
 test('creates campaign with valid data', function () {
-    // 🌐 Test complete API workflow
+    // Test complete API workflow
     $response = $this->postJson('/api/campaigns', [
         'name' => 'Test Campaign',
         'description' => 'Test Description',
@@ -527,7 +524,7 @@ test('creates campaign with valid data', function () {
 ```php
 // tests/Browser/Campaign/CampaignManagementTest.php
 test('user can create campaign through UI', function () {
-    // 🖥️ Test complete user workflow
+    // Test complete user workflow
     browse(function (Browser $browser) {
         $browser->loginAs($this->user)
                 ->visit('/campaigns/create')
@@ -547,7 +544,7 @@ test('user can create campaign through UI', function () {
 ```php
 // tests/Architecture/HexagonalArchitectureTest.php
 test('domain layer has no framework dependencies', function () {
-    // 🏗️ Ensure architectural boundaries
+    // Ensure architectural boundaries
     Arch::expect('Modules\\*\\Domain')
         ->not->toUse(['Illuminate\\*', 'Laravel\\*', 'Filament\\*']);
 });
@@ -570,43 +567,43 @@ test('controllers are single action', function () {
 ### Writing Good Tests
 
 #### Domain Tests (Unit)
-- ✅ **Fast**: No database, no external services
-- ✅ **Isolated**: Pure business logic testing
-- ✅ **Focused**: One business rule per test
-- ✅ **Readable**: Clear Given-When-Then structure
+- **Fast**: No database, no external services
+- **Isolated**: Pure business logic testing
+- **Focused**: One business rule per test
+- **Readable**: Clear Given-When-Then structure
 
 #### Infrastructure Tests (Integration)
-- ✅ **Real Dependencies**: Actual database, Redis, etc.
-- ✅ **Rollback**: Use transactions for cleanup
-- ✅ **Focused**: Test one integration at a time
-- ✅ **Realistic Data**: Use factories for test data
+- **Real Dependencies**: Actual database, Redis, etc.
+- **Rollback**: Use transactions for cleanup
+- **Focused**: Test one integration at a time
+- **Realistic Data**: Use factories for test data
 
 #### API Tests (Feature)
-- ✅ **Complete Workflow**: Test entire request/response cycle
-- ✅ **Authentication**: Test with real JWT tokens
-- ✅ **Validation**: Test both success and error cases
-- ✅ **Database State**: Verify database changes
+- **Complete Workflow**: Test entire request/response cycle
+- **Authentication**: Test with real JWT tokens
+- **Validation**: Test both success and error cases
+- **Database State**: Verify database changes
 
 ## Code Quality Standards
 
 ### Quality Tools Stack
 
 ```bash
-# 🔍 Static Analysis (PHPStan Level 8)
+# Static Analysis (PHPStan Level 8)
 ./vendor/bin/phpstan analyse
 
-# 🎨 Code Style (Laravel Pint)
+# Code Style (Laravel Pint)
 ./vendor/bin/pint                    # Fix code style
 ./vendor/bin/pint --test             # Check without fixing
 
-# 🔄 Automated Refactoring (Rector)
+# Automated Refactoring (Rector)
 ./vendor/bin/rector process          # Apply refactoring rules
 ./vendor/bin/rector process --dry-run # Preview changes
 
-# 🏗️ Architecture Validation (Deptrac)
+# Architecture Validation (Deptrac)
 ./vendor/bin/deptrac analyse         # Check layer boundaries
 
-# 🚦 All Quality Checks (GrumPHP)
+# All Quality Checks (GrumPHP)
 ./vendor/bin/grumphp run             # Run all checks
 ```
 
@@ -961,11 +958,11 @@ A: Create a new module when you have a distinct business capability (e.g., Campa
 
 **Q: Do I need to test everything?**
 A: Focus on:
-- ✅ Domain logic (high value, easy to test)
-- ✅ Application handlers (medium value, medium complexity)
-- ✅ API endpoints (medium value, higher complexity)
-- ❌ Simple getters/setters (low value)
-- ❌ Framework code (tested by framework)
+- Domain logic (high value, easy to test)
+- Application handlers (medium value, medium complexity)
+- API endpoints (medium value, higher complexity)
+- Skip: Simple getters/setters (low value)
+- Skip: Framework code (tested by framework)
 
 **Q: How do I test external services?**
 A: Use different strategies by layer:
@@ -1031,7 +1028,7 @@ A: Ensure the resource class has proper `#[ApiResource]` attributes and is in th
 
 ---
 
-## Welcome to the Team! 🎉
+## Welcome to the Team!
 
 You're now ready to start contributing to the ACME Corp CSR Platform. Remember:
 
@@ -1041,7 +1038,7 @@ You're now ready to start contributing to the ACME Corp CSR Platform. Remember:
 4. **Maintain Quality**: Run quality checks before committing
 5. **Document**: Update documentation when you learn something new
 
-**Happy Coding!** 🚀
+**Happy Coding!**
 
 ---
 

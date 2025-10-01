@@ -359,3 +359,11 @@ QUEUE_ALERT_EMAIL=admin@yourdomain.com
 - Enhanced security features
 
 This implementation provides a robust, scalable background job system capable of handling the platform's current and future needs while maintaining excellent performance and reliability.
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

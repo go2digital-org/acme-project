@@ -123,11 +123,9 @@ Container orchestration, deployment, and development environment setup.
 ### Environment Setup
 ```bash
 # Docker Environment (Recommended)
-./scripts/env-docker.sh
-docker-compose up -d
+docker-compose --env-file .env.docker up -d
 
-# Local Development
-./scripts/env-local.sh
+# Local Development (uses .env automatically)
 php artisan serve
 ```
 

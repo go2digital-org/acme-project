@@ -84,3 +84,11 @@ Modules/
 - [ADR-002: API Platform](002-api-platform.md) - API layer implementation
 - [ADR-003: CQRS Pattern](003-cqrs-pattern.md) - Application layer organization
 - [ADR-004: Domain Driven Design](004-domain-driven-design.md) - Domain modeling approach
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

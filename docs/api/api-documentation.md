@@ -2,7 +2,7 @@
 
 ## Overview
 
-The ACME Corp CSR Platform implements a pure API-first architecture using API Platform 3.x with zero traditional Laravel routes. This design ensures enterprise-grade API standards with automatic OpenAPI 3.0 documentation, JSON:API compliance, and complete technology independence.
+The ACME Corp CSR Platform implements a pure API-first architecture using API Platform 4.x with zero traditional Laravel routes. This design ensures enterprise-grade API standards with automatic OpenAPI 3.0 documentation, JSON:API compliance, and complete technology independence.
 
 ## API Architecture
 
@@ -750,5 +750,8 @@ test('creates campaign via API', function () {
 
 ---
 
-Developed and Maintained by Go2Digital
-Copyright 2025 Go2Digital - All Rights Reserved
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

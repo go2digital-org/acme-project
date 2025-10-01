@@ -321,3 +321,11 @@ public function testCampaignApprovalService(): void
 - [ADR-001: Hexagonal Architecture](001-hexagonal-architecture.md) - Technical architecture pattern
 - [ADR-003: CQRS Pattern](003-cqrs-pattern.md) - Application layer organization
 - [ADR-005: Employee to User Migration](005-employee-to-user-migration.md) - Domain model evolution
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

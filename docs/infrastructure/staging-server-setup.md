@@ -303,3 +303,11 @@ When encountering issues with the staging server:
 **Last Updated**: September 16, 2025
 
 **Configuration**: nginx + PHP-FPM + MySQL + Let's Encrypt SSL
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

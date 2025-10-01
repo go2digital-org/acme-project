@@ -289,23 +289,6 @@ Current versions:
 - `v1` - Current stable version
 - `v2` - Beta (breaking changes)
 
-## SDK & Client Libraries
-
-### PHP SDK
-```bash
-composer require acme-corp/csr-sdk-php
-```
-
-### JavaScript/TypeScript
-```bash
-npm install @acme-corp/csr-sdk
-```
-
-### Python
-```bash
-pip install acme-csr-sdk
-```
-
 ## Testing API
 
 ### Development Environment
@@ -316,10 +299,6 @@ curl -o acme-api.postman.json http://localhost:8000/api/docs.json
 # Run tests
 ./vendor/bin/pest tests/Feature/Api/
 ```
-
-### Sandbox Environment
-- URL: `https://sandbox-api.yourdomain.com`
-- Test credentials available upon request
 
 ## Security
 

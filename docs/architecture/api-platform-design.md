@@ -715,4 +715,12 @@ final readonly class ApiMetricsListener
 3. **Performance Optimization**: Efficient serialization and caching
 4. **Monitoring Capabilities**: Built-in metrics and logging
 
-This API Platform integration demonstrates technical leadership through strategic technology selection that balances rapid development with enterprise requirements, while maintaining clean architecture principles.
+The API Platform integration provides a production-ready API layer with automatic OpenAPI documentation, standardized response formats, and enterprise-grade features while maintaining hexagonal architecture boundaries.
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

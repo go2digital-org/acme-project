@@ -243,3 +243,11 @@ This broadcasting system seamlessly integrates with the existing notification in
 - Maintains audit trail in database
 
 The broadcasting layer acts as an additional delivery channel alongside email, SMS, and in-app notifications, providing real-time updates without replacing the persistent notification storage system.
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

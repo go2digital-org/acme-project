@@ -569,3 +569,11 @@ docker exec acme-redis redis-cli --scan \
 
 **Last Updated**: 2025-01-17
 **Version**: 1.0.0
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

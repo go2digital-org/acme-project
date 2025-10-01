@@ -277,3 +277,11 @@ In case of critical issues during migration:
 - [ADR-004: Domain Driven Design](004-domain-driven-design.md) - Domain modeling principles
 - [ADR-002: API Platform](002-api-platform.md) - API implementation approach
 - [ADR-001: Hexagonal Architecture](001-hexagonal-architecture.md) - Overall architecture pattern
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

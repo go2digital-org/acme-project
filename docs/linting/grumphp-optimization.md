@@ -109,3 +109,11 @@ All tools utilize caching for maximum performance:
 ```
 
 The configuration ensures lightning-fast feedback (< 5 seconds for quick checks) with comprehensive validation options for different scenarios.
+
+---
+
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved

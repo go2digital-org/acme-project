@@ -24,8 +24,8 @@ docker-compose --env-file .env.docker up -d
 # Docker Production Environment
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
-# Local Development Environment
-./scripts/env-local.sh && php artisan serve
+# Local Development Environment (uses .env automatically)
+php artisan serve
 
 # Stop Docker containers
 docker-compose down
@@ -834,5 +834,8 @@ composer audit
 
 ---
 
-Developed and Maintained by Go2Digital
-Copyright 2025 Go2Digital - All Rights Reserved
+**Developed and Maintained by [Go2digit.al](https://go2digit.al)**
+
+Specialized in enterprise-grade applications with focus on scalability, security, and maintainability.
+
+Copyright 2025 Go2digit.al - All Rights Reserved
